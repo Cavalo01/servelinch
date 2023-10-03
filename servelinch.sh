@@ -13,7 +13,7 @@ response=$(curl -I -s "$site" | grep "Server")
 
 if [ -n "$response" ]; then
   server_name=$(echo "$response" | awk '{print $2}')
-  echo "Servidor encontrado com sucesso! Servidor:: $server_name"
+  echo "Servidor encontrado com sucesso! Servidor: $server_name"
 else
   echo "Nenhum servidor encontrado."
 fi
